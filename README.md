@@ -1,11 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
+## Twitter Clone
+  the code above is about a twitter clone with react js and firebase 
+### Live Demo
+  go here and check the app 
+   [https://twitter-clone-9f13b.web.app/](https://twitter-clone-9f13b.web.app/)
+  
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
