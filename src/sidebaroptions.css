@@ -3,6 +3,7 @@
 	align-items: center;
 	cursor: pointer;
 	height: 50px;
+	width: 100%;
 }
 .sidebarOptions:hover {
 	background-color: #e8f5fe;

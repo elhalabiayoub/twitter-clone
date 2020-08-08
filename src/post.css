@@ -1,28 +1,87 @@
 .post {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
 	border-bottom: 1px solid var(--twitter-background);
+}
+.post:hover {
+	background-color: rgba(223, 219, 219, 0.2);
+}
+
+.post__header {
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.post__headerText > h3 {
+	padding: 0px;
+	margin: 0;
+}
+h3 > span {
+	color: grey;
+	font-weight: lighter;
+	margin: 0 5px;
+}
+.post__headerDescription {
+	width: 80vh;
+}
+.post__headerDescription > p {
+	margin-top: 5px;
+	max-width: fit-content;
+}
+.post__badge {
+	color: var(--twitter-color);
+	font-size: 15px !important;
+	margin-right: 3px !important;
+}
+
+.post__avatar {
+	width: 80px;
+	height: 80px;
+
+	padding-left: 10px;
+}
+.post__icon {
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: auto !important;
+	margin-right: 10px;
+	margin-top: 0px;
 }
 
 .post__body {
-	width: 100%;
+	width: 100vh;
+}
 
-	flex: 1;
-	padding: 10px;
-}
-.post__header {
-	width: 100%;
-	background-color: yellow;
-}
 .post__body > img {
+	width: 82vh;
+	margin-left: 90px;
 	border-radius: 20px;
 }
+
 .post__footer {
 	display: flex;
-
-	margin-right: 30px;
-	padding-top: 4px;
-	margin-top: 10px;
+	margin: 10px 100px;
 	justify-content: space-between;
+}
+.post__footer__icons {
+	font-size: 20px !important;
+	font-weight: 900;
+	border-radius: 20px !important;
+	color: rgb(185, 185, 185);
+	width: 20px !important ;
+	transition: color 400 ease-in-out;
+	cursor: pointer;
+}
+
+.post__icon__bluecolor:hover {
+	background-color: rgba(84, 222, 253, 0.3) !important;
+	color: var(--twitter-color);
+}
+.post__icon__greencolor:hover {
+	background-color: rgba(50, 241, 2, 0.3) !important;
+	color: rgba(50, 241, 2);
+}
+.post__icon__redcolor:hover {
+	background-color: rgba(214, 8, 94, 0.3) !important;
+	color: rgb(214, 8, 94);
 }

@@ -2,6 +2,12 @@
 	padding-bottom: 10px;
 	border-bottom: 8px solid var(--twitter-background);
 	padding-right: 10px;
+	height: 130px;
+}
+.TweetBox__avatar {
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: auto !important;
 }
 
 .TweetBox > form {
@@ -16,9 +22,12 @@
 
 .TweetBox__input > input {
 	flex: 1;
-	margin-left: 20px;
+	margin-left: 10px;
 	font-size: 20px;
 	border: none;
+}
+input:focus {
+	outline: none;
 }
 
 .TweetBox__button {
@@ -28,6 +37,6 @@
 	font-weight: 500 !important;
 	text-transform: inherit !important;
 	border-radius: 30px !important;
-	margin-top: 20px !important;
 	margin-left: auto !important;
+	font-weight: 700 !important;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./post.css";
 import { Avatar } from "@material-ui/core";
 import VerifiedUserIco from "@material-ui/icons/VerifiedUser";
@@ -7,39 +7,44 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 
-import image from "./assets/ayoub.jpeg";
+const Post = forwardRef(
+	(
+		{ displayname, username, verified, text, avatar, time, imageContent },
+		ref
+	) => {
+		return (
+			<div className="post" ref={ref}>
+				<div className="post__body">
+					<div className="post__header">
+						<div className="post__avatar">
+							<Avatar src={avatar} className="post__icon" />
+						</div>
+						<div className="post__headerText">
+							<h3>
+								{username}
+								<span>
+									{verified && <VerifiedUserIco className="post__badge" />}
+									{displayname} . {time}
+								</span>
+							</h3>
+							<div className="post__headerDescription">
+								<p>{text}</p>
+							</div>
+						</div>
+					</div>
 
-function Post({ displayname, username, verified, text, avatar }) {
-	return (
-		<div className="post">
-			<div className="post__header">
-				<div className="post__avatar">
-					<Avatar src={image} />
-				</div>
-				<div className="post__headerText">
-					<h3>
-						ElhalabiAyoub
-						<span>
-							<VerifiedUserIco className="post__badge" /> @elhalabiayoub1
-						</span>
-					</h3>
-				</div>
-				<div className="post__headerDescription">
-					<p>there is some text</p>
+					{imageContent && <img src={imageContent} alt="post avatar" />}
+
+					<div className="post__footer">
+						<ChatBubbleOutlineIcon className="post__footer__icons post__icon__bluecolor" />
+						<RepeatIcon className="post__footer__icons post__icon__greencolor" />
+						<FavoriteBorderIcon className="post__footer__icons post__icon__redcolor" />
+						<PublishIcon className="post__footer__icons post__icon__bluecolor" />
+					</div>
 				</div>
 			</div>
-			<div className="post__body">
-				<img src="" alt="image for post" />
-
-				<div className="post__footer">
-					<ChatBubbleOutlineIcon fontsize="small" />
-					<RepeatIcon fontsize="small" />
-					<FavoriteBorderIcon fontsize="small" />
-					<PublishIcon fontsize="small" />
-				</div>
-			</div>
-		</div>
-	);
-}
+		);
+	}
+);
 
 export default Post;
