@@ -1,0 +1,28 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-bottom: 1px solid var(--twitter-background);
+}
+
+.post__body {
+	width: 100%;
+
+	flex: 1;
+	padding: 10px;
+}
+.post__header {
+	width: 100%;
+	background-color: yellow;
+}
+.post__body > img {
+	border-radius: 20px;
+}
+.post__footer {
+	display: flex;
+
+	margin-right: 30px;
+	padding-top: 4px;
+	margin-top: 10px;
+	justify-content: space-between;
+}
